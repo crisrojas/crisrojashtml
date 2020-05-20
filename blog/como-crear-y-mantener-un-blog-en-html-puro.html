@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="bg-blue-200 p-6" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>crisrojas | Por qué escribir un blog en HTML puro</title>
+    <link href="https://unpkg.com/tailwindcss@%5E1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;display=swap"
+      rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-123910995-2"></script>
+    <script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-123910995-2');
+		</script>
+  </head>
+  <body class="shadow-lg bg-gray-00">
+    <style>
+	
+	body {
+		padding: 1em;
+		background-color: white;
+		font-family: 'Playfair Display', serif; 
+	}
+	blockquote {
+		padding: 20px;
+		font-style: italic;
+		margin-bottom: 28px;
+		margin-top: 28px;
+		border-left-width: 4px;
+		
+	}
+	blockquote p {
+		margin: 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: bolder;
+		margin-bottom: 16px;
+		margin-top: 42px;
+		color: black;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	li ul {
+		margin-left: 24px;
+	}
+	p, ul, ol {
+		margin-bottom: 28px;
+		font-size: 20px;
+		color: #2d3748;
+	}
+	ul {
+		list-style: disc;
+	}
+	ol {
+		list-style: decimal;
+	}
+	a {
+		text-decoration: underline;
+	}
+	.note {
+		color: blue;
+		text-decoration: none;
+	}
+	.notes p {
+		margin-bottom: 12px;
+	}
+  code {
+    font-size:12px;
+  }
+</style> <main class="mx-auto max-w-2xl container">
+      <div class="text-center"><br>
+      </div>
+      <div class="text-center"><br>
+        <p><a class="text-gray-600 font-bold font-sans text-2xl no-underline" href="../">←</a></p>
+      </div>
+      <h1 class="font-bold text-3xl text-center mt-12">Cómo escribir un blog en
+        HTML puro</h1>
+      <p class="text-center">21 de Mayo del 2020</p>
+      <p>En el artículo anterior te hable sobre las razones que me llevaron a
+        crear este blog usando HTML básico.</p>
+      <p>En esta ocasión te hablaré de la implementación.</p>
+      <p>Hearramientas que necesitarás:</p>
+      <ul>
+        <li>Github Pages</li>
+        <li>BlueGryffon</li>
+        <li>TailwindCSS o cualquier otro framework de tu preferencia <em>—
+            puedes usar simplemente vanila.</em></li>
+      </ul>
+      <ol>
+        <li>Creando un template con CSS</li>
+        <li>Creando un comando para hacer deploys</li>
+      </ol>
+      <p><code>alias publicar='git add.; git commit -m "cambios añadidos"; git
+          push -u origin master"</code></p>
+      <p>Perfecto, ahora cada vez que quieras publicar tu sitio en live sólo
+        tendrás que abrir un terminal y teclear "publicar"</p>
+    </main>
+    <footer class="text-center p-8 text-black font-sans"> <a class="no-underline"
+        href="//crisrojas.com">(c)
+        Cristian Rojas</a> </footer>
+  </body>
+</html>
