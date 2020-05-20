@@ -6,6 +6,3 @@ git add .
 git commit -am "made changes"
 # push to git remote repository
 git push -u origin master
-###########################
-echo Press Enter...
-read
