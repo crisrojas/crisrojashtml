@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html class="bg-blue-200 p-6" lang="en-US">
+<html class="p-6" lang="es-ES">
    <head>
 		<meta charset="ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>crisrojas | Por qué escribir un blog en HTML puro</title>
+		<title>crisrojas | Los objetivos numéricos</title>
 		<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 		</script>	
 	</head>
 	 
-<body class="shadow-lg bg-gray-00">
+<body class="">
 	<style>
 	
 	body {
@@ -53,7 +53,7 @@
 	p, ul, ol {
 		margin-bottom: 28px;
 		font-size: 20px;
-		color: #2d3748;
+		
 	}
 	ul {
 		list-style: disc;
@@ -71,124 +71,215 @@
 	.notes p {  
 		margin-bottom: 12px;
 	}
+	.font-sans {
+		font-family: Montserrat;
+	}
+	img {
+		margin: 0 auto;
+		border-radius: 20px;
+		border: 1px solid #eee;
+	}
 </style>
 <main class="mx-auto max-w-2xl container">
 <div class="text-center">
-	<p><a href="../../">🏠</a></p>
+	<p><a href="../../"><svg class=" text-gray-900 fill-current w-6 inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 254.182 254.182" style="enable-background:new 0 0 254.182 254.182;" xml:space="preserve">
+<g>
+	<path d="M211.655,137.102c-4.143,0-7.5,3.358-7.5,7.5v77.064h-41.373v-77.064c0-4.142-3.357-7.5-7.5-7.5H98.903   c-4.143,0-7.5,3.358-7.5,7.5v77.064H50.026v-77.064c0-4.142-3.357-7.5-7.5-7.5c-4.143,0-7.5,3.358-7.5,7.5v84.564   c0,4.142,3.357,7.5,7.5,7.5h56.377h56.379h56.373c4.143,0,7.5-3.358,7.5-7.5v-84.564   C219.155,140.46,215.797,137.102,211.655,137.102z M106.403,221.666v-69.564h41.379v69.564H106.403z"/>
+	<path d="M251.985,139.298L132.389,19.712c-2.928-2.929-7.677-2.928-10.607,0L2.197,139.298c-2.929,2.929-2.929,7.678,0,10.606   c2.93,2.929,7.678,2.929,10.607,0L127.086,35.622l114.293,114.283c1.464,1.464,3.384,2.196,5.303,2.196   c1.919,0,3.839-0.732,5.304-2.197C254.914,146.976,254.914,142.227,251.985,139.298z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></a></p>
 	<p><a class="text-gray-600 font-bold font-sans text-2xl no-underline" href="../">←</a></p>
 </div>
-<h1 class="font-bold text-3xl text-center mt-12">Por qué escribir un blog en HTML puro</h1>
-	<p class="text-center">20 de Mayo del 2020</p>
-	<p>Siempre he sido de esas personas que se pierden en los detalles.
-		De esos que se deleitan más en la optimización  que en la acción.</p>
-	
-	<p>No es de extrañar que cuándo me decidí a crear este blog, algo que se supone me tendría que haber llevado un par de horas, tardé en realidad 3 días.</p>
-	
-	<p>Simplemente no podía decidir con qué herramienta crearlo.</p>
-	
-	<p>Lo único que tenía claro es que, después de haber pagado un año de hosting a razón de casi 17 euros al mes en un proyecto sin monetizar <strong>no iba a gastar ni un sólo euro más</strong>.</p>
-	
-	<blockquote>
-		<p>Un droplet en DigitalOcean cuesta $5 y Laravel Forge — herramienta para hacer despliegues automáticos desde github, cuesta $12 en su plan más barato.</p>
-	</blockquote>
-	
-	<p>En el pasado he usado herramientas cómo Wordpress.</p>
-	
-	<p>Odio Wordpress.</p>
-	
-	<p>No es mi intención ofender ni menospreciar a nadie, sé que muchas personas usan Wordpress <em>—entre ellas muchos de mis amigos</em>...pero, simplemente no lo soporto.</p>
-	
-	<p>Contratar un buen hosting de pago, configurar la base de datos y la instalación, encontrar plugins que funcionen correctamente y que no corrompan la configuración a largo plazo es un dolor con el que no estoy dispuesto a lidiar nunca más.</p>
-	
-	<p>Fue por eso que al crear uno de mis proyectos fallidos, me decidí por <a href="//statamic.com">Statamic</a>.</p>
-	
-	<p>Statamic es elegante, fácil de usar, amigable tanto para el desarrollador cómo para el editor. 
-		Un panel de control sexy como el sólo, un modelo de datos flexible, un ecosistema rico en plugins y una comunidad vibrante. Solo de pensarlo me entran calores <em>— y ganas de volver a utilizarlo!</em></p>
-	
-	<p>Pero tiene un problema...</p>
-	
-	<p>Al igual que Wordpress, Statamic está escrito en PHP y necesita de un servidor capaz de ejecutarlo para hacer el trabajo pesado <em>—conversión de tus artículos a contenido interpretable por el navegador, indexado, paginación, etc...</em></p>
-	
-	<p>Esto realmente nunca me había molestado, pues estaba acostumbrado a pagar hosting con Wordpress.</p>
-	
-	<p>El problema vino cuando empecé a crecer como desarrollador. Me di cuenta de que si quería sacarle provecho a Statamic necesitaba un workflow un poquito especial.</p>
-	
-	<p>Sin entrar en detalles técnicos, ni del cómo ni el porqué, cada vez que creaba un artículo en el servidor tenía que copiar los cambios en local para evitar errores de versiones. <a class="note" id="note1" href="#1">1</a></p>
-	
-	<p>Esto significa que, cada vez que hiciese un cambio por muy insignificante que fuera (incluida la corrección una pequeña falta de ortografía) tenía que pasar por ese proceso.</p>
-	
-	<p>Lo cual, como puedes imaginar, dificulta enormemente el proceso creativo y se traduce en una baja producción escrita <em>—el objetivo principal de un blog</em></p>
-	
-	<p>Sin contar con el hecho de que estaba pagando $12/mes por un servicio adicional —<em>adicional al hosting—</em> que automatizará este proceso</p>
-	
-	<p>Dado que últimamente el tema económico ha estado un poco complicado para mí, decidí eliminar el servidor que tenía en DigitalOcean.</p>
-	
-	<blockquote>
-		<p>Si simplificas tu vida, simplificas tus problemas.</p>
-	</blockquote>
-	
-	<p>Es por eso, que tras buscar, y empaparme en el fango probando tecnologías que pudiesen ser las perfectas candidatas para mi proyecto <a class="note" id="note2" href="#1">2</a> he decidido volver al origen, a nuestro viejo y fiable HTML.</p>
-	
-	<p>Puede parecer una locura y de hecho lo es, pero hacía tiempo que no me sentía tan libre. 
-		De hecho, estoy escribiendo estas líneas poco después <em>—el mismo día—</em> de haber tomado la decisión, cuándo en realidad llevaba bastante tiempo sin escribir.</p>
-	
-	<blockquote>
-		<p>La simplicidad es la última sofisticación — Leonardo Da Vinci</p>
-	</blockquote>
-	
-	<p>Estoy bastante entusiasmado. Entre otras cosas, el hecho de tener un HTML/CSS independiente en cada artículo abre un mundo de posibilidades, cada nuevo artículo puede ser, en términos de diseño: idéntico, ligeramente diferente o completamente diferente al anterior.</p>
-	
-	<p>Cada artículo es una aventura en la que puedo perderme creativamente, no sólo en la escritura sino en el diseño. Es excitante.</p>
-	
-	<p>Por otro lado, quería empezar un blog sobre minimalismo, pero hoy, Miércoles 20 de mayo del 2020 le he dado cuenta la ironía de todo este asunto: pese a que quiero escribir sobre simplicidad y minimalismo estaba complicando mi vida más de la cuenta, es lo que en programación se conoce cómo &quot;overenginering&quot;</p>
-	
-	<p>Estoy en una etapa de mi vida en la que quiero simplificar al máximo, cómo he dicho al principio del artículo, soy de esas personas que disfrutan complicándose la vida, pero luego sufren las consecuencias <em>— ¿nunca has sentido que cada día es como un &quot;mini-burnout&quot;?</em>.</p>
-	
-	<p>Parece ser que el perfeccionismo, un lastre que intento abandonar desde que tome consciencia de él, vuelve a mí cíclicamente. ¿Conseguiré algún día deshacerme completamente de él? Espero que sí...</p>
-	
-	<h3>Algunas desventajas de este sistema:</h3>
-	
-	<ul>
-		<li>Olvídate de la paginación a menos que la crees manualmente</li>
-		<li>Deberás añadir manualmente cada artículo al índice</li>
-		<li>Olvídate de una barra de búsqueda</li>
-		<li>Problemas eventuales de consistencia y de branding en el diseño</li>
-		<li>El proceso de generación de Sitemaps y RSS no es automático</li>
-	</ul>
-	
-	<h3>Artículos útiles</h3>
-	
-	<ul>
-		<li><a href="http://john.ankarstrom.se/html/">Writing HTML in HTML</a></li>
-		<li><a href="https://justinjackson.ca/words_es.html">Palabras</a></li>
-		<li><a href="https://macwright.org/2019/02/06/how-to-blog.html">Never change the techonolgy &gt; How to blog</a></li>
-	</ul>
-	
-	<h3>Stack tecnológico</h3>
-	
-	<ul>
-		<li><a href="//espressoapp.com">Espresso</a></li>
-		<li><a href="//es.wikipedia.com/markdown">Markdown</a></li>
-		<li><a href="//tailwindcss.com">Tailwindcss</a></li>
-		<li><a href="//github.com">Github Pages</a></li>
-	</ul>
-	
-	<h3>Notas</h3>
-	
-	<ol>
-		<li><a id="2"></a>Github <a href="#note1">⤴</a></li>
-		<li><a id="1"></a>Tecnologías probadas durante mi búsqueda <a href="#note2">⤴</a>
-			
-			<ul>
-				<li>Gatsby cloud + Contentful</li>
-				<li>Gatsby + TinaCMS</li>
-				<li>Gatsby + Sanity</li>
-				<li>Sapper + Vercel</li>
-				<li>Forestry + Hugo</li>
-			</ul>
-		</li>
-	</ol>
-	
+<h1 class="font-bold font-sans text-3xl text-center mt-12">Los objetivos numéricos</h1>
+	<p class="text-center">2019-08-07</p>
+
+	<article class="text-gray-900">
+		<p>Estás en el punto A.</p>
+		
+		<p>
+			<img src="../../assets/img/objectifsa.png" alt="">
+		</p>
+		
+		<p>Te gustaría estar en el punto B.</p>
+		
+		<p>
+			<img src="../../assets/img/objectifsb.png" alt="">
+		</p>
+		
+		<p>A y B están separados.</p>
+		
+		<p>
+			<img src="../../assets/img/objectifsab.png" alt="">
+		</p>
+		
+		<p>Para ir a B hay que caminar.</p>
+		
+		<p>
+			<img src="../../assets/img/objectifsmarcher.png" alt="">
+		</p>
+		
+		<p>No conoces la distancia que separa los dos puntos. Sólo tienes una idea de en qué dirección se encunetra B.</p>
+		
+		<p>
+			<img src="../../assets/img/objectifunknown.png" alt="">
+		</p>
+		
+		<p>Puedes, sin embargo, hacer una estimación...</p>
+		
+		<p>
+			<img src="../../assets/img/objectifs10km.png" alt="10 km aprox?">
+		</p>
+		
+		<p>Para ir a B podrías :</p>
+		
+		<ol>
+			<li>Simplemente partir del punto A con la idea de llegar a B.</li>
+			<li>Partir del punto A con la idea de caminar 10 Km.</li>
+		</ol>
+		
+		<p>En el primer caso, tu atención está puesta en el resultado. Tu mente, energía y recursos están fijos en él. El fin, la línea de meta. Tu consciencia vive en el futuro.</p>
+		
+		<p>Se trata de un objetivo cualitativo : Lo que importa es la calidad del resultado, pues en tu pequeña cabeza de inconformista estimas &quot;B&quot; mucho mejor que &quot;A&quot; — <em>y por tanto, <strong>cualitativamente</strong> superior</em></p>
+		
+		<blockquote>
+			<p>El futuro no existe</p>
+		</blockquote>
+		
+		<p>En el segundo caso, tu atención está puesta en el camino.
+			Tu objetivo es simplemente caminar.</p>
+		
+		<p>Cada kilómetro que avanzas es una pequeña victoria, una alegría. Te tomas la molestia pues de contarlos con cariño — <em>con lo que te ha costado, sería una pena equivocarse en las cuentas</em> —</p>
+		
+		<p>El contarlos te permite ser consciente de tu progreso.</p>
+		
+		<p>Tu consciencia está en cada pequeño paso que das.</p>
+		
+		<p>.</p>
+		
+		<p>.</p>
+		
+		<p>.</p>
+		
+		<p>Estás <strong>presente</strong></p>
+		
+		<p>Cada kilómetro te acerca más y más de B, a pesar de que no era tu objetivo principal y que tus estimaciones puedan ser erróneas.</p>
+		
+		<p>Estimaste que te tenías que caminar 10 Km y lo hiciste. Estableciste un <em>objetivo cuantitativo o numérico</em></p>
+		
+		<p>Un objetivo es <strong>un deseo</strong>. El deseo de estar en B en lugar de en A.</p>
+		
+		<p>
+			<img src="../../assets/img/objectifscommon.png" alt="">
+		</p>
+		
+		<p>Pero...</p>
+		
+		<p>Los objetivos irrealizados son a menudo fuente de frustración, ansiedad y dolor.</p>
+		
+		<blockquote>
+			<p>Relajación es quien eres. Estrés es quien crees que deberías ser.</p>
+		</blockquote>
+		
+		<p>A menudo deseamos llegar a B lo mas rápido posible y caminando lo mínimo.</p>
+		
+		<p>Es lógico, pues nuestro cerebro es una máquina de automatismos que prefiere evitar el gasto innecesario de energía.</p>
+		
+		<p>Pero, malas noticias...</p>
+		
+		<p>Siempre habrá una distancia que separará A y B.</p>
+		
+		<p>
+			<img src="../../assets/img/objectifsepare.png" alt="">
+		</p>
+		
+		<p>No hay atajos. Si queremos ir a B deberemos atravasar esa distancia.</p>
+		
+		<p>Es invitable. Una ley cósmica.</p>
+		
+		<h3>💡 Entonces, si...</h3>
+		
+		<p>Siempre habrá que recorrer una distancia...</p>
+		
+		<p><span class="bg-yellow-200">Por qué no cambiar nuestro deseo de llegar por el deseo de caminar?</span></p>
+		
+		<p>No sería más sabio ?</p>
+		
+		<h3>💡Y si...</h3>
+		
+		<p>Proyectarse en el futro puede frustranos y minar nuestro bienestar y estado mental...</p>
+		
+		<p><span class="bg-yellow-200">Por qué no fijarse una cantidad de pasos a caminar y concentrarse y regocijarse con cada pasito?</span></p>
+		
+		<p>No sería esta una mejor forma de vivir el presente mientras te acercas al mismo tiempo a ese futuro que buscas?</p>
+		
+		<h3>Tres posibilidades</h3>
+		
+		<p>Si decides adoptar un objetivo numérico y estimas la distancia en 10 Km, tres situaciones son posibles :</p>
+		
+		<p>⒈ Tenías razón. A y B están separados por una distancia de 10 Km. Felicitaciones!</p>
+		
+		<p>⒉ A y B están más cerca de lo que creías.</p>
+		
+		<p>⒊ A y B estás separados por una distancia mayor a la que estimaste.</p>
+		
+		<p>Como habrás adivinado, la última opción es la más probable, sin embargo...</p>
+		
+		<p>Incluso si te equivocas en tus estimaciones :</p>
+		
+		<ul>
+			<li>☑︎ Habrás aprovechado mucho más el viaje</li>
+			<li>☑︎ Estarás mucho más presente en tu propia vida</li>
+			<li>☑︎ Aprenderás a calibrar mejor tus estimaciones</li>
+			<li>☑︎ Tendrás una visión más realista y precisa de tus capacidades</li>
+		</ul>
+		
+		<p>Y sobre todo — <em>y créeme</em> — estarás mucho más cerca de la meta.</p>
+		
+		<h3>Conclusión</h3>
+		
+		<p>Los objetivos numéricos tienen un potencial extraordinario para cambiar tu vida a mejor y acercarte más a ese futuro que deseas.</p>
+		
+		<p>Fomentan el minimalismo, la apreciación y el mindfullness.</p>
+		
+		<p>Pueden igualmente ayudarte a desarrollar nuevos — <em>y buenos</em> — hábitos.</p>
+		
+		<p>Utilizo estos principios desde hace un par de meses con muy buenos resultados. Por el momento, y para que te hagas una idea de cómo puedes implementar estos principios, te dejo una imagen con mis objetivos de este verano y su estado actual :</p>
+		
+		<p>
+			<img src="../../assets/img/objectifsaout.png" alt="Horas promedio de despertar/acostar. El resto es acumulativo">
+		</p>
+		
+	</article>
 <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 	  <form action="https://app.convertkit.com/forms/1407148/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="1407148" data-uid="aea07713ed" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800" style="">
 	<div class="formkit-background" style="opacity: 0.2;"></div>

@@ -4,7 +4,7 @@
 		<meta charset="ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>crisrojas | Por qué escribir un blog en HTML puro</title>
+		<title>crisrojas | My future self</title>
 		<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
@@ -77,117 +77,44 @@
 	<p><a href="../../">🏠</a></p>
 	<p><a class="text-gray-600 font-bold font-sans text-2xl no-underline" href="../">←</a></p>
 </div>
-<h1 class="font-bold text-3xl text-center mt-12">Por qué escribir un blog en HTML puro</h1>
-	<p class="text-center">20 de Mayo del 2020</p>
-	<p>Siempre he sido de esas personas que se pierden en los detalles.
-		De esos que se deleitan más en la optimización  que en la acción.</p>
+<h1 class="font-bold text-3xl text-center mt-12">My future self</h1>
+	<p class="text-center">2019-03-20</p>
+	<p>Play and read !</p>
 	
-	<p>No es de extrañar que cuándo me decidí a crear este blog, algo que se supone me tendría que haber llevado un par de horas, tardé en realidad 3 días.</p>
+	<p><em>(Note: May take some seconds to play)</em></p>
 	
-	<p>Simplemente no podía decidir con qué herramienta crearlo.</p>
+	<p>
+	<audio id="player2" preload="none" controls>
+		<source src="https://www.youtube.com/watch?v=iPUmE-tne5U" type="video/x-youtube">
+	</audio>
+	</p>
 	
-	<p>Lo único que tenía claro es que, después de haber pagado un año de hosting a razón de casi 17 euros al mes en un proyecto sin monetizar <strong>no iba a gastar ni un sólo euro más</strong>.</p>
+	<p>
+		<img src="mfs0.png" alt="">
+		
+		<img src="mfs1.png" alt="">
+		
+		<img src="mfs2.png" alt="">
+		
+		<img src="mfs3.png" alt="">
+		
+		<img src="mfs4.png" alt="">
+		
+		<img src="mfs5.png" alt="">
+		
+		<img src="mfs6.png" alt="">
+	</p>
 	
-	<blockquote>
-		<p>Un droplet en DigitalOcean cuesta $5 y Laravel Forge — herramienta para hacer despliegues automáticos desde github, cuesta $12 en su plan más barato.</p>
-	</blockquote>
+	<h1>Original idea:</h1>
 	
-	<p>En el pasado he usado herramientas cómo Wordpress.</p>
+	<p>
+		<img src="mfsidea.png" alt="Original idea (first stech)">
+	</p>
 	
-	<p>Odio Wordpress.</p>
+	<p><!--https://www.labnol.org/internet/youtube-audio-player/26740/-->
+	</p>
 	
-	<p>No es mi intención ofender ni menospreciar a nadie, sé que muchas personas usan Wordpress <em>—entre ellas muchos de mis amigos</em>...pero, simplemente no lo soporto.</p>
-	
-	<p>Contratar un buen hosting de pago, configurar la base de datos y la instalación, encontrar plugins que funcionen correctamente y que no corrompan la configuración a largo plazo es un dolor con el que no estoy dispuesto a lidiar nunca más.</p>
-	
-	<p>Fue por eso que al crear uno de mis proyectos fallidos, me decidí por <a href="//statamic.com">Statamic</a>.</p>
-	
-	<p>Statamic es elegante, fácil de usar, amigable tanto para el desarrollador cómo para el editor. 
-		Un panel de control sexy como el sólo, un modelo de datos flexible, un ecosistema rico en plugins y una comunidad vibrante. Solo de pensarlo me entran calores <em>— y ganas de volver a utilizarlo!</em></p>
-	
-	<p>Pero tiene un problema...</p>
-	
-	<p>Al igual que Wordpress, Statamic está escrito en PHP y necesita de un servidor capaz de ejecutarlo para hacer el trabajo pesado <em>—conversión de tus artículos a contenido interpretable por el navegador, indexado, paginación, etc...</em></p>
-	
-	<p>Esto realmente nunca me había molestado, pues estaba acostumbrado a pagar hosting con Wordpress.</p>
-	
-	<p>El problema vino cuando empecé a crecer como desarrollador. Me di cuenta de que si quería sacarle provecho a Statamic necesitaba un workflow un poquito especial.</p>
-	
-	<p>Sin entrar en detalles técnicos, ni del cómo ni el porqué, cada vez que creaba un artículo en el servidor tenía que copiar los cambios en local para evitar errores de versiones. <a class="note" id="note1" href="#1">1</a></p>
-	
-	<p>Esto significa que, cada vez que hiciese un cambio por muy insignificante que fuera (incluida la corrección una pequeña falta de ortografía) tenía que pasar por ese proceso.</p>
-	
-	<p>Lo cual, como puedes imaginar, dificulta enormemente el proceso creativo y se traduce en una baja producción escrita <em>—el objetivo principal de un blog</em></p>
-	
-	<p>Sin contar con el hecho de que estaba pagando $12/mes por un servicio adicional —<em>adicional al hosting—</em> que automatizará este proceso</p>
-	
-	<p>Dado que últimamente el tema económico ha estado un poco complicado para mí, decidí eliminar el servidor que tenía en DigitalOcean.</p>
-	
-	<blockquote>
-		<p>Si simplificas tu vida, simplificas tus problemas.</p>
-	</blockquote>
-	
-	<p>Es por eso, que tras buscar, y empaparme en el fango probando tecnologías que pudiesen ser las perfectas candidatas para mi proyecto <a class="note" id="note2" href="#1">2</a> he decidido volver al origen, a nuestro viejo y fiable HTML.</p>
-	
-	<p>Puede parecer una locura y de hecho lo es, pero hacía tiempo que no me sentía tan libre. 
-		De hecho, estoy escribiendo estas líneas poco después <em>—el mismo día—</em> de haber tomado la decisión, cuándo en realidad llevaba bastante tiempo sin escribir.</p>
-	
-	<blockquote>
-		<p>La simplicidad es la última sofisticación — Leonardo Da Vinci</p>
-	</blockquote>
-	
-	<p>Estoy bastante entusiasmado. Entre otras cosas, el hecho de tener un HTML/CSS independiente en cada artículo abre un mundo de posibilidades, cada nuevo artículo puede ser, en términos de diseño: idéntico, ligeramente diferente o completamente diferente al anterior.</p>
-	
-	<p>Cada artículo es una aventura en la que puedo perderme creativamente, no sólo en la escritura sino en el diseño. Es excitante.</p>
-	
-	<p>Por otro lado, quería empezar un blog sobre minimalismo, pero hoy, Miércoles 20 de mayo del 2020 le he dado cuenta la ironía de todo este asunto: pese a que quiero escribir sobre simplicidad y minimalismo estaba complicando mi vida más de la cuenta, es lo que en programación se conoce cómo &quot;overenginering&quot;</p>
-	
-	<p>Estoy en una etapa de mi vida en la que quiero simplificar al máximo, cómo he dicho al principio del artículo, soy de esas personas que disfrutan complicándose la vida, pero luego sufren las consecuencias <em>— ¿nunca has sentido que cada día es como un &quot;mini-burnout&quot;?</em>.</p>
-	
-	<p>Parece ser que el perfeccionismo, un lastre que intento abandonar desde que tome consciencia de él, vuelve a mí cíclicamente. ¿Conseguiré algún día deshacerme completamente de él? Espero que sí...</p>
-	
-	<h3>Algunas desventajas de este sistema:</h3>
-	
-	<ul>
-		<li>Olvídate de la paginación a menos que la crees manualmente</li>
-		<li>Deberás añadir manualmente cada artículo al índice</li>
-		<li>Olvídate de una barra de búsqueda</li>
-		<li>Problemas eventuales de consistencia y de branding en el diseño</li>
-		<li>El proceso de generación de Sitemaps y RSS no es automático</li>
-	</ul>
-	
-	<h3>Artículos útiles</h3>
-	
-	<ul>
-		<li><a href="http://john.ankarstrom.se/html/">Writing HTML in HTML</a></li>
-		<li><a href="https://justinjackson.ca/words_es.html">Palabras</a></li>
-		<li><a href="https://macwright.org/2019/02/06/how-to-blog.html">Never change the techonolgy &gt; How to blog</a></li>
-	</ul>
-	
-	<h3>Stack tecnológico</h3>
-	
-	<ul>
-		<li><a href="//espressoapp.com">Espresso</a></li>
-		<li><a href="//es.wikipedia.com/markdown">Markdown</a></li>
-		<li><a href="//tailwindcss.com">Tailwindcss</a></li>
-		<li><a href="//github.com">Github Pages</a></li>
-	</ul>
-	
-	<h3>Notas</h3>
-	
-	<ol>
-		<li><a id="2"></a>Github <a href="#note1">⤴</a></li>
-		<li><a id="1"></a>Tecnologías probadas durante mi búsqueda <a href="#note2">⤴</a>
-			
-			<ul>
-				<li>Gatsby cloud + Contentful</li>
-				<li>Gatsby + TinaCMS</li>
-				<li>Gatsby + Sanity</li>
-				<li>Sapper + Vercel</li>
-				<li>Forestry + Hugo</li>
-			</ul>
-		</li>
-	</ol>
+	<p><em>Special thanks to Elder Drummeller and Elder Dunn for helping me to correct my broken english</em></p>
 	
 <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 	  <form action="https://app.convertkit.com/forms/1407148/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="1407148" data-uid="aea07713ed" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800" style="">
