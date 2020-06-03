@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+https://en.wikipedia.org/wiki/Wikipedia:Scripts/Wikilinks
+[[test]]
+<script>
+plugin.id = "WikiLinks";
+
+plugin.prefary = [
+    ["class", "wiki-link", ""],
+];
+
+//
+// Plugin management
+//
+
+plugin.init = 
+function init(glob) {
+    plugin.major = 2;
+    plugin.minor = 7;
+    plugin.version = plugin.major + "." + plugin.minor;
+    plugin.description = "Munges wikiML links to be clickable in the output window";
+    plugin.prefary = plugin.prefary.concat(plugin.prefary);
+}
+
+plugin.disable = 
+function disable()
+{
+    client.munger.delRule("wiki-link");
+    client.munger.delRule("wiki-template-link");
+	client.munger.delRule("wiki-external-link");
+    client.commandManager.removeCommands(plugin.commands);
+
+    display( plugin.id + " v" + plugin.version + " disabled.");
+    
+    return true;
+}
+
+plugin.enable = 
+function enable()
+{
+    client.munger.addRule("wiki-link", /(\[(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\[(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*[^\]]+(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\](?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\])/, insertWikiLink, 10, 10);
+    client.munger.addRule("wiki-template-link", /(\{(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\{(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*[^\}]+(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\}(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\})/, insertWikiTemplateLink, 10, 10);
+    client.munger.addRule("wiki-external-link", /(\[http:\/\/[^\s]+ [^\]]+\])/, insertWikiExtLink, 10, 10);
+	
+	
+    var cmdary = [
+        [ "wiki-links-class", cmdClass, CMD_CONSOLE, "[<className>]" ],
+    ];
+
+    plugin.commands = client.commandManager.defineCommands(cmdary);
+
+    display( plugin.id + " v" + plugin.version + " enabled.");
+    
+    return true;
+
+}
+
+//
+// Mungers
+//
+
+function insertWikiLink(matchText,containerTag, data, mungerEntry) {
+    var wikiLink = matchText;
+    var linkTitle;
+
+    wikiLink  = matchText.replace(/^\[(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\[(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*/, "");
+    wikiLink  = wikiLink.replace(/(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\](?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\]$/, "");
+	linkTitle = wikiLink;
+	
+	// fix bad links (but leave linkTitle)
+	wikiLink = wikiLink.replace(/^w:/, ""); 
+	
+    if (linkTitle.match(/\|/)) {
+        var ary = linkTitle.match(/^(.*?)\|(.*)$/);
+        wikiLink = ary[1];
+        linkTitle = ary[2];
+    }
+    wikiLink = escape(wikiLink.replace(/ /g, "_"));
+
+    var anchor = document.createElementNS( "http://www.w3.org/1999/xhtml",
+                                           "html:a");
+    anchor.setAttribute("href", "http://en.wikipedia.org/wiki/" + wikiLink);
+    anchor.setAttribute("class", "chatzilla-link "+plugin.prefs["class"]);
+    mungerEntry.enabled = false;
+    data.inLink = true;
+    client.munger.munge(linkTitle, anchor, data);
+    mungerEntry.enabled = true;
+    delete data.inLink;
+    
+    //insertHyphenatedWord(linkTitle, anchor, data);
+    containerTag.appendChild(document.createTextNode("[["));
+    containerTag.appendChild(anchor);
+    containerTag.appendChild(document.createTextNode("]]"));
+}
+
+function insertWikiTemplateLink(matchText,containerTag, data, mungerEntry) {
+    var wikiLink = matchText;
+    var linkTitle;
+
+    wikiLink  = matchText.replace(/^\{(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\{(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*/, "");
+    wikiLink  = wikiLink.replace(/(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\}(?:[\x1f\x02\x0f\x03\x16]\d{1,2})*\}$/, "");
+	linkTitle = wikiLink;
+
+	// fix  parameters
+	if(linkTitle.match(/^[^\|]+\|/)) {
+		linkParam = linkTitle.replace(/^[^\|]+\|(.*)$/, "|$1");
+		linkTitle = linkTitle.replace(/^([^\|]+)\|.*$/, "$1");
+		wikiLink  = linkTitle;
+	}
+	else {
+		linkParam = false;
+	}
+	
+	// fix bad links (but leave linkTitle)
+		wikiLink  = wikiLink.replace(/^(?:template|msgnw|raw|subst):/, ""); // modifiers
+
+	// set namespace by syntax
+	if(wikiLink.match(/^:[a-z\s]*:?/i)) {
+		wikiLink = wikiLink.replace(/^:([a-z\s]+):/i, "$1:"); // most ns
+		wikiLink = wikiLink.replace(/^:/, ""); // main
+	}
+	else if(wikiLink.match(/^int:/i)) {
+		wikiLink = wikiLink.replace(/^int:/i, "MediaWiki:"); // fix modifier
+	}
+	else {
+		wikiLink = wikiLink.replace(/^/, "Template:");
+	}
+	
+	// construct link
+    wikiLink = escape(wikiLink.replace(/ /g, "_"));
+    var anchor = document.createElementNS( "http://www.w3.org/1999/xhtml",
+                                           "html:a");
+    anchor.setAttribute("href", "http://en.wikipedia.org/wiki/" + wikiLink);
+    anchor.setAttribute("class", "chatzilla-link "+plugin.prefs["class"]);
+    mungerEntry.enabled = false;
+    data.inLink = true;
+    client.munger.munge(linkTitle, anchor, data);
+    mungerEntry.enabled = true;
+    delete data.inLink;
+
+    //insertHyphenatedWord(linkTitle, anchor, data);
+    containerTag.appendChild(document.createTextNode("{{"));
+    containerTag.appendChild(anchor);
+	if(linkParam) {
+		containerTag.appendChild(document.createTextNode(linkParam));
+	}
+    containerTag.appendChild(document.createTextNode("}}"));
+}
+
+function insertWikiExtLink(matchText,containerTag, data, mungerEntry) {
+    var wikiExtLink = matchText;
+    var linkTitle = matchText;
+
+	// separate link and text
+	wikiExtLink = wikiExtLink.replace(/^\[(http:\/\/[^\s]+)\s+.*$/, "$1");
+	linkTitle   = linkTitle.replace(/^\[http:\/\/[^\s]+ ([^\]]+)\]$/, "$1");
+	
+	// create link
+	var anchor = document.createElementNS( "http://www.w3.org/1999/xhtml",
+                                           "html:a");
+    anchor.setAttribute("href", wikiExtLink);
+    anchor.setAttribute("class", "chatzilla-link "+plugin.prefs["class"]);
+	anchor.setAttribute("style", "text-decoration:underline;");
+    mungerEntry.enabled = false;
+    data.inLink = true;
+    client.munger.munge(linkTitle, anchor, data);
+    mungerEntry.enabled = true;
+    delete data.inLink;
+    
+    // show link syntax
+    containerTag.appendChild(anchor);
+	
+	// add external link icon
+	var img = document.createElementNS( "http://www.w3.org/1999/xhtml",
+                                           "html:img");
+	img.setAttribute("src", 'http://upload.wikimedia.org/wikipedia/commons/4/44/External.png');
+	containerTag.appendChild(img);
+}
+
+//
+// Commands
+//
+
+function cmdClass(e) {
+    if ( null != e.linkclass )
+        plugin.prefs["class"] = e.linkclass;
+    display( "Current value: " + plugin.prefs["class"] );
+}
+	</script>
+</body>
+</html>
