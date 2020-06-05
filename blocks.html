@@ -1,4 +1,23 @@
-<p><code>html
-	&lt;div class=&quot;test&quot;&gt;
+<p><code>
+	&lt;style&gt;
+	.info-block {
+	    position: relative;
+	}
+	.info-block::before {
+	    position: absolute;
+	    content: &quot;i&quot;;
+	    background: #38b2ac;
+	    color: white;
+	    font-weight: bold;
+	    left: -12px;
+	    font-family: serif;
+	    height: 24px;
+	    width: 24px;
+	    text-align: center;
+	    border-radius: 0.75rem;
+	}
+	&lt;/style&gt;
+	&lt;div class=&quot;info-block bg-gray-200 border-l-4 avenir tracking-wide border-teal-500 py-4 px-8 text-gray-700&quot;&gt;
+	        This is an info block. &lt;a href=&quot;#&quot; class=&quot;text-teal-500 font-bold&quot;&gt;Learn more&lt;/a&gt;
 	&lt;/div&gt;
 	</code></p>
