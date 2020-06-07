@@ -33,7 +33,7 @@
 	<section class="mt-48 flex flex-col md:flex-row max-w-4xl mx-auto p-6">
 		<div class="flex p-8">
 			<p class="text-xl" style="width: 250px; transform: rotate(-10deg);">Voici la photo avec la pire qualité que j'ai trouvé</p>
-		<div class=""><img class="w-64" src="assets/photo.png" alt="" /></div>
+		<div class=""><img class="w-64" src="assets/images/photo.png" alt="" /></div>
 		<p class="text-2xl" style="transform: rotate(10deg);">Cris Rojas</p>
 		</div>
 		<div class="p-8">
@@ -54,7 +54,7 @@
 		
 		<div class="">
 			<p class="mt-12 ml-8 text-3xl">J'ai commencé ma relation avec les arts numériques, plus spécifquement l'HTML, quand j'avais 10 ans, au cybercafé de ma mère. C'était l'époque d'or d'internet où des gifs "en construction" <img class="w-16 inline"src="assets/images/vvenancio.gif" alt="en construction"> , geocities et des  balises &lt;marquee&gt; peuplaient le web.</p>
-			
+			 <img class="mt-6 block" src="assets/construction.gif" alt="" />
 		</div>
 	</section>
 		<div class="mt-32 text-white bg-gray-900 text-2xl">
@@ -109,6 +109,18 @@
 		x.style.display = "none";
 	}
 }
+document.onkeydown = function(evt) {
+evt = evt || window.event;
+if (evt.keyCode == '37') {
+	window.history.back();
+}
+if (evt.keyCode == '39') {
+	window.history.forward();
+}
+if (evt.keyCode == '38') {
+	window.location.href = "./"
+}
+};
 </script>
 </body>
 </html>
